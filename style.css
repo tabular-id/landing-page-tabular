@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #f8fafc;
   color: #1e293b;
   line-height: 1.6;
@@ -27,6 +27,7 @@ body {
 }
 
 .nav-container {
+  height: 50px;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -35,14 +36,26 @@ body {
 }
 
 .logo img {
-  height: 40px;
+  height: 85px;
   transition: transform 0.3s ease;
 }
 
 .logo:hover img {
   transform: scale(1.03);
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
+.logo-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.5px;
+}
 .nav-menu {
   display: flex;
   list-style: none;
@@ -59,7 +72,7 @@ body {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -6px;
   left: 0;
@@ -108,7 +121,15 @@ body {
 }
 
 .hero-content h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1.2rem;
+}
+
+.hero-download h1 {
+  font-family: "Montserrat";
   font-size: 3.5rem;
   font-weight: 700;
   color: #1e293b;
@@ -172,7 +193,7 @@ body {
 
 .section-title {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
   font-weight: 600;
   color: #1e293b;
@@ -282,7 +303,7 @@ body {
 
 .section-title {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
   font-weight: 600;
   color: #1e293b;
@@ -339,67 +360,92 @@ body {
 }
 
 .lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 999;
-    }
-    .lightbox.active {
-      visibility: visible;
-      opacity: 1;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-    }
-
-.footer {
-  background-color: white;
-  padding: 4rem 1rem 2rem;
-  border-top: 1px solid #e2e8f0;
-  text-align: center;
-}
-
-.footer-content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.social-links {
-  margin-bottom: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  font-size: 1.8rem;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+.lightbox.active {
+  visibility: visible;
+  opacity: 1;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
 }
 
-.social-link {
-  color: #64748b;
+.about-tabular {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: #1e293b;
+  color: white;
+}
+
+.about-tabular .logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-tabular .logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.about-tabular h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about-tabular p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.about-tabular .version-info {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.about-tabular .github-link {
+  display: inline-block;
+  font-size: 1rem;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.social-link:hover {
   color: #4c6ef5;
-  transform: scale(1.1) translateY(-2px);
+  transition: color 0.3s ease;
 }
 
-.footer p {
-  color: #64748b;
-  font-size: 0.95rem;
-  margin: 0.5rem 0;
+.about-tabular .github-link:hover {
+  color: #3a5175;
 }
 
+.about-tabular .credit {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.about-tabular .copyright {
+  font-size: 0.9rem;
+}
 @media (max-width: 992px) {
   .hero {
     flex-direction: column;
@@ -447,4 +493,83 @@ body {
   .section-title {
     font-size: 2rem;
   }
+}
+#download {
+  padding: 4rem 0;
+  text-align: center;
+}
+#download h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 3rem;
+}
+.platforms {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.platform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease;
+  max-width: 220px;
+}
+
+.platform:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.platform img {
+  width: 48px;
+  height: 48px;
+}
+
+.platform h3 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.platform a {
+  text-decoration: none;
+}
+
+.platform-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.platform-button.primary {
+  background-color: #4c6ef5;
+  color: white;
+}
+
+.platform-button.secondary {
+  background-color: white;
+  color: #4c6ef5;
+  border: 2px solid #4c6ef5;
+}
+
+.platform-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(76, 110, 245, 0.2);
 }

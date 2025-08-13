@@ -18,14 +18,16 @@
 <body>
     <header class="header">
     <nav class="nav-container">
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
             <img src="foto/logo (1).png" alt="Tabular Logo">
+            <span class="logo-text">Tabular</span>
         </a>
         <ul class="nav-menu" id="navMenu">
             <li><a href="#fitur" class="nav-link">Fitur</a></li>
             <li><a href="#database" class="nav-link">Support</a></li>
-            <li><a href="#demo" class="nav-link">Demo</a></li>
-            <li><a href="#kontak" class="nav-link">Kontak</a></li>
+            <li><a href="#docs" class="nav-link">Docs</a></li>
+            <li><a href="#download" class="nav-link">Download</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
         </ul>
         <div class="menu-toggle" id="menuToggle">
             <span></span>
@@ -36,11 +38,13 @@
 </header>
         <section class="hero">
         <div class="hero-content">
-            <h1 id="heroTitle">Database Management Made Easy</h1>
+            <h1 id="heroTitle">Tabular Make Easy For Analytics Database</h1>
             <p id="heroDesc">Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more.</p>
             <div class="cta-buttons">
-                <button class="cta-button primary" id="ctaButtonMac">Download for Mac</button>
-                <button class="cta-button secondary" id="ctaButtonOther">Other Platforms</button>
+                 <button class="cta-button primary" id="ctaButtonMac" onclick="window.location.href='https://github.com/tabular-id/tabular/releases/download/v0.2.3/Tabular-0.2.3.dmg'">Download for Mac</button>
+                 <a href="#download">
+                 <button class="cta-button secondary" id="ctaButtonOther">Other Platforms</button>
+                 </a>
             </div>
         </div>
         <div class="hero-image">
@@ -115,12 +119,6 @@
         </div>
         <h4>PostgreSQL</h4>
     </div>
-    <div class="db-card" data-db="MongoDB">
-        <div class="db-icon">
-            <img src="foto/mongodb.png" alt="">
-        </div>
-        <h4>MongoDB</h4>
-    </div>
     <div class="db-card" data-db="SQLite">
         <div class="db-icon">
             <img src="foto/sqlite.png" alt="SQLite">
@@ -133,63 +131,21 @@
         </div>
         <h4>Redis</h4>
     </div>
-    <div class="db-card" data-db="Oracle">
-        <div class="db-icon">
-            <img src="foto/oracle.png" alt="Oracle">
-        </div>
-        <h4>Oracle</h4>
-    </div>
     <div class="db-card" data-db="microsoftsqlserver">
         <div class="db-icon">
             <img src="foto/microsoftsqlserver.png" alt="microsoftsqlserver">
         </div>
         <h4>SQL Server</h4>
     </div>
-    <div class="db-card" data-db="mariadb">
+        <div class="db-card" data-db="MongoDB">
         <div class="db-icon">
-            <img src="foto/mariadb.png" alt="mariadb">
+            <img src="foto/mongodb.png" alt="">
         </div>
-        <h4>Maria DB</h4>
-    </div>
-    <div class="db-card" data-db="Amazon">
-        <div class="db-icon">
-            <img src="foto/amazonredshift.png" alt="Amazon">
-        </div>
-        <h4>Amazon Red Shift</h4>
-    </div>
-    <div class="db-card" data-db="Cockroach">
-        <div class="db-icon">
-            <img src="foto/cockroachdb.png" alt="Cockroach">
-        </div>
-        <h4>Cockroach DB</h4>
-    </div>
-    <div class="db-card" data-db="Cassandra">
-        <div class="db-icon">
-            <img src="foto/cassandra.png" alt="Cassandra">
-        </div>
-        <h4>Cassandra</h4>
-    </div>
-    <div class="db-card" data-db="bigquery">
-        <div class="db-icon">
-            <img src="foto/bigquery.png" alt="bigquery">
-        </div>
-        <h4>Big Query</h4>
-    </div>
-    <div class="db-card" data-db="clickhouse">
-        <div class="db-icon">
-            <img src="foto/clickhouse.png" alt="clickhouse">
-        </div>
-        <h4>Click House</h4>
-    </div>
-    <div class="db-card" data-db="Turso">
-        <div class="db-icon">
-            <img src="foto/tursodb.png" alt="Turso">
-        </div>
-        <h4>Turso DB</h4>
+        <h4>MongoDB Coming Soon</h4>
     </div>
 </div>
 </section>
-    <section class="screenshots-section" id="demo">
+    <section class="screenshots-section" id="docs">
     <h2 class="section-title">See Tabular in Action</h2>
     <div class="screenshots-grid">
         <div class="screenshot-card">
@@ -208,7 +164,7 @@
             <p>This view shows a list of SQL query files neatly organized into folders such as ADMIN, DATA, and VOLT. Each file contains ready-to-execute SQL commands for various database needs.</p>
         </div>
         <div class="screenshot-card">
-            <img src="foto/photo_6102487347921797599_y.jpg" alt="Quick Actions for Your Data" onclick="openLightbox(this.src)">
+            <img src="foto/photo_6114138241281147881_y.jpg" alt="Quick Actions for Your Data" onclick="openLightbox(this.src)">
             <h3>Quick Actions for Your Data</h3>
             <p>This view shows the right-click feature on table data, which allows users to copy cells, copy rows as CSV, or directly export to a CSV/XLSX file.</p>
         </div>
@@ -217,19 +173,44 @@
       <img src="" alt="Preview">
     </div>
 </section>
-    <footer class="footer" id="kontak">
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#" class="social-link">📱</a>
-                <a href="#" class="social-link">💬</a>
-                <a href="#" class="social-link">📧</a>
-                <a href="#" class="social-link">🐙</a>
+ <section id="download">
+        <h2>Download for Your Platform</h2>
+        <div class="platforms">
+            <div class="platform">
+                <img src="foto/icons8-windows-50.png" alt="Windows">
+                <h3>Windows</h3>
+                <button class="platform-button primary" onclick="window.location.href='https://github.com/tabular-id/tabular/releases/download/v0.2.2/Tabular-0.2.2.exe'">Download</button>
             </div>
-            <p>&copy; 2025 Tabular. Dibuat dengan ❤️ untuk generasi digital natives.</p>
-            <p style="margin-top: 0.5rem; opacity: 0.8;">Open source • Community driven • Privacy focused</p>
+            <div class="platform">
+                <img src="foto/icons8-apple-inc-50.png" alt="macOS">
+                <h3>macOS</h3>
+                <button class="platform-button primary" onclick="window.location.href='https://github.com/tabular-id/tabular/releases/download/v0.2.3/Tabular-0.2.3.dmg'">Download</button>
+            </div>
+            <div class="platform">
+                <img src="foto/icons8-linux-50.png" alt="Linux">
+                <h3>Linux</h3>
+                <button class="platform-button primary" onclick="window.location.href=''">Download</button>
+            </div>
         </div>
-    </footer>
-    <script src="main.js"></script>     <script>function openLightbox(src) {
+    </section>
+    
+    <section class="about-tabular" id="kontak">
+        <div class="logo">
+            <img src="foto/logo (1).png" alt="Tabular Logo">
+        </div>
+        <h2>About Tabular</h2>
+        <p>Your SQL Editor, Forged with Rust: Fast, Safe, Efficient.</p>
+        <div class="version-info">
+            Version 0.2.2<br>
+            Built with ❤️ using Rust
+        </div>
+        <a href="https://github.com/tabular-id/tabular" class="github-link">https://github.com/tabular-id/tabular</a>
+        <p class="credit">Credit: Jayuda</p>
+        <p class="copyright">© 2025 PT. Vneu Teknologi Indonesia</p>
+    </section>
+    <script src="main.js"></script>
+    
+    <script>function openLightbox(src) {
       const lightbox = document.getElementById("lightbox");
       lightbox.querySelector("img").src = src;
       lightbox.classList.add("active");
