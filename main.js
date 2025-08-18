@@ -234,6 +234,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // tess
+
   // Lightbox
   window.openLightbox = function (src) {
     const lightbox = document.getElementById("lightbox");
